@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Prayer Time Offline</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1c1c1e; --muted: #6b6b70;
+    --rule: #e5e5ea; --accent: #3e3058;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0b0f1e; --fg: #ececf1; --muted: #9a9aa5; --rule: #23283b; --accent: #c9a961; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2.5rem 1.25rem 5rem;
+    background: var(--bg); color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 41rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .4rem; letter-spacing: -.02em; }
+  h2 {
+    font-size: 1.15rem; margin: 2.4rem 0 .6rem; letter-spacing: -.01em;
+    padding-top: 1.4rem; border-top: 1px solid var(--rule);
+  }
+  .updated { color: var(--muted); font-size: .92rem; margin: 0 0 2rem; }
+  .lede {
+    font-size: 1.12rem; border-left: 3px solid var(--accent);
+    padding-left: 1rem; margin: 0 0 1.5rem;
+  }
+  ul { padding-left: 1.15rem; }
+  li { margin: .4rem 0; }
+  a { color: inherit; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  footer { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: .92rem; }
+  code { font-size: .92em; background: color-mix(in srgb, var(--fg) 8%, transparent);
+         padding: .1em .35em; border-radius: 4px; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Prayer Time Offline (Namoz Vaqti) &middot; last updated 13 August 2026</p>
+
+<p class="lede">
+  This app does not collect, store or transmit any personal data. There are no accounts,
+  no analytics, no advertising and no third-party SDKs.
+</p>
+
+<h2>What the app does with your location</h2>
+<p>
+  Prayer times and the qibla direction are geometry: both are calculated from your
+  latitude and longitude and the position of the sun. That calculation happens
+  <strong>entirely on your device</strong>. Your coordinates are stored only on the phone,
+  in the app's own storage, so the timetable is correct the next time you open it.
+</p>
+<p>
+  You can turn location off altogether and pick a city from a built-in list instead. The
+  app then never asks the system for your position.
+</p>
+
+<h2>The one thing that leaves the device</h2>
+<p>
+  To show a city name rather than a pair of numbers, the app asks the operating system to
+  turn coordinates into a place name. On iOS this uses Apple's MapKit geocoding service;
+  on Android it uses the system geocoder. That request is handled by Apple or Google under
+  <em>their</em> privacy policies, and it is the only feature in the app that uses the
+  network.
+</p>
+<ul>
+  <li>It is used for the city label only. The timetable itself never needs it.</li>
+  <li>Searching for a city by name in the place picker uses the same service.</li>
+  <li>Nothing is sent to us, and we operate no servers. On Android the app does not even
+      hold the <code>INTERNET</code> permission.</li>
+</ul>
+
+<h2>Notifications and alarms</h2>
+<p>
+  Prayer alarms and reminders are scheduled locally by your device. Nothing is pushed from
+  a server, and no notification token is created or shared.
+</p>
+
+<h2>Data we collect</h2>
+<p>
+  None. We receive no data about you at all &mdash; not your location, not your settings,
+  not usage statistics, not crash reports. Your settings stay on your device and in your
+  own iCloud or Google device backup, which we cannot read.
+</p>
+
+<h2>Children</h2>
+<p>
+  The app is suitable for all ages and collects nothing from anyone, including children.
+</p>
+
+<h2>Changes</h2>
+<p>
+  If this policy ever changes, the updated version will be published on this page with a
+  new date. Any change that affects what data leaves your device will also be described in
+  the app's release notes.
+</p>
+
+<h2>Contact</h2>
+<p>
+  Questions, or a disagreement between the app's times and your local mosque's timetable:
+</p>
+<ul>
+  <li>Telegram: <a href="https://telegram.me/pc_geek_uz">@pc_geek_uz</a></li>
+  <li>Email: <a href="mailto:gulomovmazizullo@gmail.com">gulomovmazizullo@gmail.com</a></li>
+</ul>
+
+<footer>
+  Prayer times are computed from the sun's astronomical position. Like any timetable this
+  rests on a convention &mdash; please check it against the times your local mosque
+  publishes.
+</footer>
+
+</main>
+</body>
+</html>
