@@ -40,65 +40,116 @@
 </head>
 <body>
 <main>
-
 <h1>Privacy Policy</h1>
-<p class="updated">Prayer Time Offline (Namoz Vaqti) &middot; last updated 13 August 2026</p>
+<p class="updated">Prayer Time Offline (Namoz Vaqti) &middot; last updated 29 August 2026</p>
 
 <p class="lede">
-  This app does not collect, store or transmit any personal data. There are no accounts,
-  no analytics, no advertising and no third-party SDKs.
+  The app has no account to sign into and no advertising. Prayer times are still worked
+  out entirely on your phone. Since version 1.1 the app does send crash reports and a
+  small amount of anonymous usage information &mdash; and <strong>never your
+  location</strong>. This page says exactly what that means.
 </p>
 
-<h2>What the app does with your location</h2>
+<h2>What changed in version 1.1</h2>
+<p>
+  Versions 1.0 and earlier sent nothing at all. That had a cost we only discovered after
+  release: two mistakes in the prayer-time calculation &mdash; one in Andijan, one in
+  Riyadh &mdash; were found only because users noticed the app disagreed with the adhan
+  and took the trouble to write in. Every other user affected by the same mistake simply
+  had wrong times and no way for us to know.
+</p>
+<p>
+  Version 1.1 adds crash reporting and a small number of specific measurements so that
+  the next such mistake is visible to us without anyone having to report it. We used the
+  narrowest form of this we could build, and the rest of this page is the detail.
+</p>
+
+<h2>Your location never leaves the device</h2>
 <p>
   Prayer times and the qibla direction are geometry: both are calculated from your
-  latitude and longitude and the position of the sun. That calculation happens
-  <strong>entirely on your device</strong>. Your coordinates are stored only on the phone,
-  in the app's own storage, so the timetable is correct the next time you open it.
+  latitude and longitude and the position of the sun, entirely on your device. Your
+  coordinates are stored only on the phone, in the app's own storage.
+</p>
+<p>
+  Your coordinates, your city and your country are <strong>never</strong> included in
+  anything the app sends. This is enforced in the code, not just promised here: the
+  functions that send information accept only fixed values &mdash; a calculation method,
+  a school, yes or no &mdash; and have no way to carry a place name.
 </p>
 <p>
   You can turn location off altogether and pick a city from a built-in list instead. The
   app then never asks the system for your position.
 </p>
 
-<h2>The one thing that leaves the device</h2>
+<h2>What the app sends</h2>
+<ul>
+  <li><strong>Crash reports.</strong> If the app crashes, we receive the technical
+      details of the crash: where in the code it happened, the device model and the
+      operating system version.</li>
+  <li><strong>Performance data.</strong> How long the app takes to start and to draw its
+      screens.</li>
+  <li><strong>Which calculation convention is in use</strong> &mdash; the method and the
+      school &mdash; and whether you changed it yourself rather than accepting the
+      default. This is the measurement that matters: if many people in one region keep
+      changing away from the default, the default for that region is wrong.</li>
+  <li><strong>Taps on the calculation row</strong> on the main screen.</li>
+</ul>
+<p>
+  That is the complete list. There is no general activity logging: we do not receive
+  which prayers you set alarms for, when you open the app, what you look at, or anything
+  you type.
+</p>
+
+<h2>Identifiers</h2>
+<p>
+  The app creates an <strong>anonymous</strong> sign-in with no name, email or password
+  behind it. It exists for one reason: so that one phone crashing forty times can be told
+  apart from forty phones crashing once. It cannot be traced back to you, and deleting
+  the app ends it.
+</p>
+<p>
+  <strong>No advertising identifier is collected.</strong> The part of the analytics
+  software that would read it is not included in the app at all, and there is no
+  advertising, no ad network and no cross-app or cross-site tracking of any kind.
+</p>
+
+<h2>Who processes it</h2>
+<p>
+  Crash reports and the measurements above are processed by <strong>Google Firebase</strong>
+  (Analytics, Crashlytics, Performance Monitoring and Anonymous Authentication) on our
+  behalf, under
+  <a href="https://firebase.google.com/support/privacy">Firebase's privacy terms</a>.
+  We operate no servers of our own. On Android the app now holds the <code>INTERNET</code>
+  permission, which it did not before, solely for this.
+</p>
+
+<h2>City names</h2>
 <p>
   To show a city name rather than a pair of numbers, the app asks the operating system to
-  turn coordinates into a place name. On iOS this uses Apple's MapKit geocoding service;
-  on Android it uses the system geocoder. That request is handled by Apple or Google under
-  <em>their</em> privacy policies, and it is the only feature in the app that uses the
-  network.
+  turn coordinates into a place name &mdash; Apple's MapKit geocoding on iOS, the system
+  geocoder on Android. That request is handled by Apple or Google under their own privacy
+  policies. Searching for a city by name in the place picker uses the same service. The
+  timetable itself never needs it.
 </p>
-<ul>
-  <li>It is used for the city label only. The timetable itself never needs it.</li>
-  <li>Searching for a city by name in the place picker uses the same service.</li>
-  <li>Nothing is sent to us, and we operate no servers. On Android the app does not even
-      hold the <code>INTERNET</code> permission.</li>
-</ul>
 
 <h2>Notifications and alarms</h2>
 <p>
-  Prayer alarms and reminders are scheduled locally by your device. Nothing is pushed from
-  a server, and no notification token is created or shared.
-</p>
-
-<h2>Data we collect</h2>
-<p>
-  None. We receive no data about you at all &mdash; not your location, not your settings,
-  not usage statistics, not crash reports. Your settings stay on your device and in your
-  own iCloud or Google device backup, which we cannot read.
+  Prayer alarms and reminders are scheduled locally by your device. Nothing is pushed
+  from a server, and no notification token is created or shared.
 </p>
 
 <h2>Children</h2>
 <p>
-  The app is suitable for all ages and collects nothing from anyone, including children.
+  The app is suitable for all ages. It asks for no personal information from anyone,
+  including children, and the diagnostic data described above is not linked to any
+  identity.
 </p>
 
 <h2>Changes</h2>
 <p>
   If this policy ever changes, the updated version will be published on this page with a
-  new date. Any change that affects what data leaves your device will also be described in
-  the app's release notes.
+  new date. Any change that affects what data leaves your device will also be described
+  in the app's release notes &mdash; as this one is.
 </p>
 
 <h2>Contact</h2>
@@ -106,7 +157,7 @@
   Questions, or a disagreement between the app's times and your local mosque's timetable:
 </p>
 <ul>
-  <li>Telegram: <a href="https://telegram.me/pc_geek_uz">@pc_geek_uz</a></li>
+  <li>Telegram: <a href="https://t.me/pc_geek_uz">@pc_geek_uz</a></li>
   <li>Email: <a href="mailto:gulomovmazizullo@gmail.com">gulomovmazizullo@gmail.com</a></li>
 </ul>
 
@@ -115,7 +166,6 @@
   rests on a convention &mdash; please check it against the times your local mosque
   publishes.
 </footer>
-
 </main>
 </body>
 </html>
