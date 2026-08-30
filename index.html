@@ -71,10 +71,19 @@
   coordinates are stored only on the phone, in the app's own storage.
 </p>
 <p>
-  Your coordinates, your city and your country are <strong>never</strong> included in
-  anything the app sends. This is enforced in the code, not just promised here: the
-  functions that send information accept only fixed values &mdash; a calculation method,
-  a school, yes or no &mdash; and have no way to carry a place name.
+  Your coordinates and your city are <strong>never</strong> included in anything the app
+  sends. This is enforced in the code, not just promised here: the functions that send
+  information accept only fixed values &mdash; a calculation method, a school, yes or no
+  &mdash; and have no way to carry a place name.
+</p>
+<p>
+  One honest exception, because it would be easy to leave unsaid: anything that connects
+  to the internet reveals an IP address, and Google derives an approximate location from
+  it &mdash; country level, not city &mdash; before discarding the IP. We never send it
+  and we cannot switch it off while crash reporting exists at all. It is listed as
+  &ldquo;approximate location&rdquo; on this app&rsquo;s Google Play data safety page for
+  exactly that reason. It tells us which countries the app is used in. It does not tell
+  us, or anyone, where you are.
 </p>
 <p>
   You can turn location off altogether and pick a city from a built-in list instead. The
@@ -93,6 +102,8 @@
       default. This is the measurement that matters: if many people in one region keep
       changing away from the default, the default for that region is wrong.</li>
   <li><strong>Taps on the calculation row</strong> on the main screen.</li>
+  <li><strong>An approximate location</strong>, derived by Google from the IP address of
+      the connection &mdash; see above.</li>
 </ul>
 <p>
   That is the complete list. There is no general activity logging: we do not receive
