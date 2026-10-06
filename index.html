@@ -82,8 +82,10 @@
   it before discarding the IP. We never send it, and we cannot prevent it while crash
   reporting exists at all. This page used to say that location was kept at country level.
   That was wrong: by default Google Analytics keeps the nearest city, and it did so for
-  this app. We are switching that off so that only the country is kept, and this page will
-  say so when it is done. It is listed as &ldquo;approximate location&rdquo; on this
+  this app until 6 October 2026, when we switched that off. Since then only the country
+  is kept. The same switch also stopped Analytics recording the device model and the exact
+  system version with usage; crash reports still carry them. It is listed as
+  &ldquo;approximate location&rdquo; on this
   app&rsquo;s Google Play data safety page for exactly this reason.
 </p>
 <p>
@@ -99,8 +101,9 @@
   <li><strong>Performance data.</strong> How long the app takes to start and to draw its
       screens.</li>
   <li><strong>Basic usage, recorded by Firebase itself:</strong> that the app was
-      installed and opened, how long it was in use, the app and system versions, the
-      device model and its language &mdash; and on Android, that the app was removed.</li>
+      installed and opened, how long it was in use, the app version, the operating system
+      and its major version, and the phone&rsquo;s language &mdash; and on Android, that
+      the app was removed.</li>
   <li><strong>Which calculation convention is in use</strong> &mdash; the method and the
       school &mdash; and whether you changed it yourself rather than accepting the
       default, and to what. This is the measurement that matters: if many people in one
