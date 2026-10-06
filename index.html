@@ -41,7 +41,7 @@
 <body>
 <main>
 <h1>Privacy Policy</h1>
-<p class="updated">Prayer Time Offline (Namoz Vaqti) &middot; last updated 29 August 2026</p>
+<p class="updated">Prayer Time Offline (Namoz Vaqti) &middot; last updated 6 October 2026</p>
 
 <p class="lede">
   The app has no account to sign into and no advertising. Prayer times are still worked
@@ -79,11 +79,12 @@
 <p>
   One honest exception, because it would be easy to leave unsaid: anything that connects
   to the internet reveals an IP address, and Google derives an approximate location from
-  it &mdash; country level, not city &mdash; before discarding the IP. We never send it
-  and we cannot switch it off while crash reporting exists at all. It is listed as
-  &ldquo;approximate location&rdquo; on this app&rsquo;s Google Play data safety page for
-  exactly that reason. It tells us which countries the app is used in. It does not tell
-  us, or anyone, where you are.
+  it before discarding the IP. We never send it, and we cannot prevent it while crash
+  reporting exists at all. This page used to say that location was kept at country level.
+  That was wrong: by default Google Analytics keeps the nearest city, and it did so for
+  this app. We are switching that off so that only the country is kept, and this page will
+  say so when it is done. It is listed as &ldquo;approximate location&rdquo; on this
+  app&rsquo;s Google Play data safety page for exactly this reason.
 </p>
 <p>
   You can turn location off altogether and pick a city from a built-in list instead. The
@@ -97,18 +98,40 @@
       operating system version.</li>
   <li><strong>Performance data.</strong> How long the app takes to start and to draw its
       screens.</li>
+  <li><strong>Basic usage, recorded by Firebase itself:</strong> that the app was
+      installed and opened, how long it was in use, the app and system versions, the
+      device model and its language &mdash; and on Android, that the app was removed.</li>
   <li><strong>Which calculation convention is in use</strong> &mdash; the method and the
       school &mdash; and whether you changed it yourself rather than accepting the
-      default. This is the measurement that matters: if many people in one region keep
-      changing away from the default, the default for that region is wrong.</li>
+      default, and to what. This is the measurement that matters: if many people in one
+      region keep changing away from the default, the default for that region is
+      wrong.</li>
+  <li><strong>Calibration.</strong> If you fit the times to your mosque&rsquo;s
+      timetable, the twilight angles that came out of it, rounded to a tenth of a
+      degree.</li>
   <li><strong>Taps on the calculation row</strong> on the main screen.</li>
+  <li><strong>Permissions</strong>: whether the app may currently show notifications,
+      set exact alarms and use your location &mdash; yes or no for each, never the
+      location itself.</li>
+  <li><strong>Prayer alarms that rang</strong>: which prayer, whether it was the reminder
+      before it, whether it was set as an alarm or a notification, and whether it could
+      actually be seen or heard. On Android this is recorded as the alarm rings; on
+      iPhone it is counted the next time you open the app.</li>
+  <li><strong>The rating request</strong>: that the app asked the system to show its
+      rating prompt, and on how many separate days the app had been opened by then.</li>
+  <li><strong>The tip screen</strong>: that it was opened and from where, and whether the
+      store could show its prices. If you leave a tip, Apple or Google handles the
+      payment, and Firebase records that a purchase was made, which amount and its
+      price.</li>
+  <li><strong>Sharing and contact</strong>: that the share sheet, or the Telegram or email
+      link, was opened &mdash; not what you shared or wrote.</li>
   <li><strong>An approximate location</strong>, derived by Google from the IP address of
       the connection &mdash; see above.</li>
 </ul>
 <p>
-  That is the complete list. There is no general activity logging: we do not receive
-  which prayers you set alarms for, when you open the app, what you look at, or anything
-  you type.
+  That is the complete list. The app never sends your coordinates or your city, anything
+  you type, or anything about other apps on your phone. All of it, crash reports included,
+  can be turned off at once under Settings &rarr; Send diagnostics.
 </p>
 
 <h2>Identifiers</h2>
